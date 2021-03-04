@@ -231,7 +231,7 @@ app.get('/getRate', function (req, res) {
 
   var cost = calculateRate(weight, type);
 
-  var params = { weight: weight, type: type.toFixed(2), cost: cost, typeinput: typeinput };
+  var params = { weight: weight, type: type.toFixed(2), cost: cost, typeinput: typeinput, zone: zone };
   res.render('pages/cost', params);
 })
 
