@@ -34,9 +34,9 @@ app.get('/math', function (req, res) {
   var firstnumber = req.query.firstnumber;
   var operator = req.query.operator;
   var secondnumber = req.query.secondnumber;
-  var sum = calc(firstnumber, secondnumber, operator);
+  var total = calc(firstnumber, secondnumber, operator);
 
-  var params = {firstnumber: firstnumber, secondnumber: secondnumber, operator: operator, sum: sum};
+  var params = {firstnumber: firstnumber, secondnumber: secondnumber, operator: operator, total: total};
 
   var result = res.json(params);
   res.render(result);
