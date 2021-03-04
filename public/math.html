@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Math</title>
+  <script>
+    function loadXMLDoc() {
+      var xmlhttp;
+      if (window.XMLHttpRequest) {
+        //code for IE7+, Firefox, Chrome, Opera, Safari
+        xmlhttp = new XMLHttpRequest();
+      } else {
+        //code for IE6, IE5
+        xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+      }
+      xmlhttp.onreadystatechange = function () {
+        if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+          document.getElementById('ajaxUpdate').innerHTML = xmlhttp.responseText;
+          console.log('This is part of the ajax request');
+        }
+      }
+      xmlhttp.open("GET", "/math_service", true);
+      xmlhttp.send();
+    }
+    
+    </script>
+</head>
+<body>
+  <form action="/math" method="GET">
+    <input id="firstnumber" name="firstnumber" type="number">
+    <select name="operator">
+      <option value="+">+</option>
+      <option value="-">-</option>
+      <option value="x">x</option>
+      <option value="/">/</option>
+    </select>
+    <input id='secondnumber' name="secondnumber" type="number">
+    <input id='submit' type="submit" value="=">
+  <button id="ajax" type="button" onclick=loadXMLDoc()>Ajax</button>
+  </form>
+  <div id="ajaxUpdate"></div>
+</body>
+
+</html>
