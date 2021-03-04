@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postal Calculator</title>
+</head>
+<body>
+  <form action="/getRate" method="GET">
+    <label for="weight">Weight in Oz</label><br>
+    <span style="color: crimson;">Max 13oz</span><br>
+    <input type="text" id="weight" name="weight" required><br><br>
+    <label for="type">Type</label><br>
+    <select id="type" name="type" required>
+      <option>Choose a Type</option>
+      <option value="Stamped">Letters (Stamped)</option>
+      <option value="Metered">Letters (Metered)</option>
+      <option value="Flats">Large Envelopes (Flats)</option>
+      <option value="Package">First-Class Package Service--Retail</option>
+    </select><br><br>
+    <label for="zone">If shipping a package, choose a zone:</label><br>
+    <select id="zone" name="zone">
+      <option>Choose a Zone</option>
+      <option value="1&2">1 & 2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select><br><br>
+    <input type="submit" value="Calculate Cost">
+  </form>
+</body>
+</html>
