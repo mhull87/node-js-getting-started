@@ -1,4 +1,4 @@
-const apiURL = 'http://www.omdbapi.com/?apikey=5a713c14&s=';
+const apiURL = 'https://www.omdbapi.com/?apikey=5a713c14&s=';
 
 const fetchData = async () => {
   try {
